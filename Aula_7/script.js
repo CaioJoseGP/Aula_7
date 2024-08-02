@@ -1,3 +1,16 @@
+const audio = document.getElementById('background-audio');
+const play_button = document.getElementById('play-button');
+
+function playAudio() {
+    if (audio.paused) {
+        audio.play();
+    } else {
+        audio.pause();
+    }
+}
+
+play_button.addEventListener('click', playAudio);
+
 const phrases = [
     '[ERAM 01:08. AO TERMINAR O SEU TRABALHO, VOCÊ ESTÁ VOLTANDO PRA CASA DEPOIS DE UM LONGO DIA. O SEU REDOR ESTÁ SILENCIOSO, O SOM DOS SEUS PASSOS É ESCONDIDO PELA CHUVA CAINDO SOBRE A CIDADE. O SEU CAMINHO DE SEMPRE ESTÁ INTERDITADO, ENTÃO VOCÊ DECIDE MUDAR SUA ROTINA INDO POR OUTRO LUGAR...]',
     '[VOCÊ ESTÁ SOZINHO NO MEIO DE UMA RUA, QUANDO UM ESTRANHO SE APROXIMA LENTAMENTE]',
@@ -8,7 +21,8 @@ const phrases = [
 
 let currentPhraseIndex = 0;
 let typingTimeout;
-var typingSpeed = 90;
+var typingSpeed = 100;
+const speed_button = document.getElementById('speed-button');
 
 function typeText(elementId, text) {
     const element = document.getElementById(elementId);
@@ -27,7 +41,18 @@ function typeText(elementId, text) {
 }
 
 function SpeedAlt() {
-    typingSpeed = 40;
+    if(speed_button.textContent == '2x'){
+        typingSpeed = 50;
+        speed_button.textContent = '4x';
+
+    } else if(speed_button.textContent == '4x'){
+        typingSpeed = 25;
+        speed_button.textContent = '1x';
+
+    } else {
+        typingSpeed = 100;
+        speed_button.textContent = '2x';
+    }
 }
 
 function showNextPhrase() {
