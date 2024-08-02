@@ -217,3 +217,15 @@ h2 {
         border-color: #00ffff;
     }
 }
+
+/* media query */
+
+@media screen and (min-width: 1500px) {
+    #content {
+        margin-top: 150px;
+    }
+
+    #dialogue-box {
+        margin-top: 50px;
+    }
+}
