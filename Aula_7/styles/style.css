@@ -6,6 +6,10 @@ body {
     box-sizing: border-box;
 }
 
+audio {
+    display: none;
+}
+
 a {
     text-decoration: none;
     color: #00ffff;
