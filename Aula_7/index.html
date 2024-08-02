@@ -20,6 +20,10 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
+    <audio id="background-audio" autoplay loop>
+        <source src="assets/rain_sound.mp3" type="audio/mpeg">
+    </audio>
+
     <div id="navbar">
         <header>
             <ul id="navbar-list">
@@ -30,11 +34,11 @@
                     01:08
                 </li>
                 <li>
-                    <a href="https://github.com/CaioJoseGP/Aula_7/blob/main/ReadMe.md" title="Direitos/Copyright do itens utilizados (?)">Direitos</a>
+                    <a href="ReadMe.md" title="Direitos/Copyright do itens utilizados (?)">Direitos</a>
                 </li>
                 <li id="navbar-buttons">
                     <button id="speed-button" title="Velocidade do Texto">2x</button>
-                    <button title="Zerar o volume da música"><ion-icon name="musical-note-outline"></ion-icon></button>
+                    <button id="play-button" title="Zerar o volume da música"><ion-icon name="musical-note-outline"></ion-icon></button>
                 </li>
             </ul>
         </header>
